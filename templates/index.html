@@ -17,7 +17,8 @@
                 <div class="calculation-row">
                     <div>
                         <label for="percent">What is </label>
-                        <input type="number" id="percent" class="aligned-item" min="0" oninput="calculatePercentage()"> %
+                        <input type="number" id="percent" class="aligned-item" min="0" oninput="calculatePercentage()">
+                        %
                         <label for="num1">of </label>
                         <input type="number" id="num1" class="aligned-item" min="0" oninput="calculatePercentage()">?
                     </div>
@@ -29,9 +30,11 @@
                 <div class="calculation-row">
                     <div>
 
-                        <input type="number" id="num2" class="aligned-item" min="0" oninput="calculateWhatPercentageOf()">
+                        <input type="number" id="num2" class="aligned-item" min="0"
+                            oninput="calculateWhatPercentageOf()">
                         <label for="num2">is what percentage of</label>
-                        <input type="number" id="num3" class="aligned-item" min="0" oninput="calculateWhatPercentageOf()">?
+                        <input type="number" id="num3" class="aligned-item" min="0"
+                            oninput="calculateWhatPercentageOf()">?
                     </div>
                     <div>
                         <span id="result2" class="result-box">&nbsp;</span>
@@ -41,9 +44,11 @@
                 <div class="calculation-row">
                     <div>
                         <label for="start">What is the increase/decrease<br>from </label>
-                        <input type="number" id="start" class="aligned-item" min="0" oninput="calculatePercentageChange()">%
+                        <input type="number" id="start" class="aligned-item" min="0"
+                            oninput="calculatePercentageChange()">%
                         <label for="end">to </label>
-                        <input type="number" id="end" class="aligned-item" min="0" oninput="calculatePercentageChange()">%?
+                        <input type="number" id="end" class="aligned-item" min="0"
+                            oninput="calculatePercentageChange()">%?
                     </div>
                     <div>
                         <span id="result3" class="result-box">&nbsp;</span>
@@ -95,7 +100,7 @@
                     <label for="cmInput">Centimeters</label>
                     <input type="number" id="cmInput" class="aligned-item" min="1" oninput="convertCmToM()">
                     <label for="mInput">Meters</label>
-                    <input type="number" id="mInput"class="aligned-item" min="1" oninput="convertMToCm()">
+                    <input type="number" id="mInput" class="aligned-item" min="1" oninput="convertMToCm()">
                 </div>
                 <div class="conversion-row">
                     <label for="inchesInput">Inches</label>
@@ -139,28 +144,43 @@
                 <!-- Time Conversion -->
                 <div class="conversion-row">
                     <label for="minutesInput">Minutes</label>
-                    <input type="number" id="minutesInput" class="aligned-item" min="1" oninput="convertMinutesToSeconds()">
+                    <input type="number" id="minutesInput" class="aligned-item" min="1"
+                        oninput="convertMinutesToSeconds()">
                     <label for="secondsInput">Seconds</label>
-                    <input type="number" id="secondsInput" class="aligned-item" min="1" oninput="convertSecondsToMinutes()">
+                    <input type="number" id="secondsInput" class="aligned-item" min="1"
+                        oninput="convertSecondsToMinutes()">
                 </div>
                 <div class="conversion-row">
                     <label for="hoursInput">Hours</label>
                     <input type="number" id="hoursInput" class="aligned-item" min="1" oninput="convertHoursToMinutes()">
                     <label for="hoursMinutesInput">Minutes</label>
-                    <input type="number" id="hoursMinutesInput" class="aligned-item" min="1" oninput="convertMinutesToHours()">
+                    <input type="number" id="hoursMinutesInput" class="aligned-item" min="1"
+                        oninput="convertMinutesToHours()">
                 </div>
                 <div class="conversion-row">
                     <label for="daysInput">Days</label>
                     <input type="number" id="daysInput" class="aligned-item" min="1" oninput="convertDaysToHours()">
                     <label for="daysHoursInput">Hours</label>
-                    <input type="number" id="daysHoursInput" class="aligned-item" min="1" oninput="convertHoursToDays()">
+                    <input type="number" id="daysHoursInput" class="aligned-item" min="1"
+                        oninput="convertHoursToDays()">
                 </div>
             </div>
-            <div class="outer-box"></div>
+            <div class="outer-box">
+                <div id="gameContainer">
+                    <canvas id="gameCanvas" width="400" height="400"></canvas>
+                    <div id="gameControls">
+                        <input type="text" id="playerName" placeholder="Your name">
+                        <button id="newGameBtn">New Game</button>
+                        <div id="points">Points: 0</div>
+                        <ul id="highScoresList"></ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="{{ url_for('static', filename='conversion.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='snake.js') }}"></script>
 </body>
 
 </html>

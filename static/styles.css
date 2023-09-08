@@ -50,7 +50,8 @@ input[type="number"].aligned-item {
     text-align: left;
 }
 
-label, input {
+label,
+input {
     margin: 0;
 }
 
@@ -72,7 +73,7 @@ button:hover {
     background-color: #ffffff;
     color: #000000;
     border-radius: 10px;
-    align-content:center;
+    align-content: center;
 }
 
 .weather-sun-section {
@@ -88,7 +89,8 @@ table {
     text-align: left;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -96,13 +98,61 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
 .double-column {
     display: flex;
     justify-content: space-between;
-    gap: 20px;  /* Optional: adds some space between the columns */
+    gap: 20px;
+    /* Optional: adds some space between the columns */
 }
 
 /* Optional: Makes sure that each box takes up equal width */
 .double-column .outer-box {
     flex: 1;
 }
+
+/* SNAKE */
+#game-area {
+    margin: 20px auto;
+}
+
+#gameCanvas {
+    border: 4px solid #009DDE;
+    background-color: #2C336A;
+    margin-bottom: 10px;
+}
+
+#gameControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newGameBtn {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#playerName {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#points {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#highScoresList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* SNAKE */
