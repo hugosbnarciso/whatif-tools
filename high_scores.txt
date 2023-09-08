@@ -1,1 +1,0 @@
-[{"name": "Hugo Narciso", "score": 5}, {"name": "Hugo Narciso", "score": 4}, {"name": "Hugo", "score": 0}, {"name": "Hugo", "score": 0}]
