@@ -1,24 +1,58 @@
+/* Import fonts hosted locally on your server */
+@font-face {
+    font-family: 'Lulo Clean One Bold';
+    src: url('{{ url_for('static', filename='fonts/LuloCleanOneBold.otf') }}') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Verb Light';
+    src: url('{{ url_for('static', filename='fonts/VerbLight.woff') }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Verb Light', sans-serif;  /* Body text uses Verb Light */
     text-align: center;
-    background-color: #2C336A;
-    color: #ffffff;
+    background-color: #2C336A;  /* Main background color */
+    color: #ffffff;  /* Font color */
+    margin: 0;
+    padding: 0;
+}
+
+.page-title, h2, label {
+    font-family: 'Lulo Clean One Bold', sans-serif;  /* Bold font for headers */
+    color: #009DDE;  /* Brand accent color */
 }
 
 .container {
     margin-top: 20px;
 }
 
+.logo {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+.page-title {
+    font-size: 36px;
+}
+
 .aligned-item {
     font-size: 20px;
     vertical-align: middle;
+    border: 1px solid #ccc;
+    background: #fbfbfb;
+    border-radius: 10px;
+    color: #000000;
+    padding: 5px;
 }
 
 input[type="number"].aligned-item {
     width: 70px;
-    border: 1px solid #ccc;
-    background: #fbfbfb;
-    border-radius: 10px;
 }
 
 .result-box {
@@ -36,7 +70,7 @@ input[type="number"].aligned-item {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 10px;
-    align-items: left;
+    align-items: center;
     margin-bottom: 15px;
     text-align: left;
 }
@@ -50,14 +84,21 @@ input[type="number"].aligned-item {
     text-align: left;
 }
 
-label,
-input {
+label, input {
     margin: 0;
 }
 
 button {
     grid-column: span 4;
     margin: 0 auto;
+    background-color: #009DDE;
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: 'Lulo Clean One Bold', sans-serif; /* Use bold font for consistency */
+    font-size: 18px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -65,12 +106,12 @@ button:hover {
 }
 
 .outer-box {
-    max-width: 80%;
+    max-width: 90%; /* Adjust the width to fit columns comfortably */
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    background-color: #ffffff;  /* White background */
     color: #000000;
     border-radius: 10px;
     align-content: center;
@@ -89,8 +130,7 @@ table {
     text-align: left;
 }
 
-th,
-td {
+th, td {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -99,60 +139,30 @@ th {
     background-color: #f2f2f2;
 }
 
-.double-column {
+.triple-column {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    /* Optional: adds some space between the columns */
+    gap: 20px; /* Adds space between the columns */
 }
 
-/* Optional: Makes sure that each box takes up equal width */
-.double-column .outer-box {
+/* Ensure each box takes up equal width and fits in multiple columns */
+.triple-column .outer-box {
     flex: 1;
 }
 
-/* SNAKE */
-#game-area {
-    margin: 20px auto;
+/* Styles for the video download form */
+#download-form label {
+    font-size: 20px;
+    margin-right: 10px;
 }
 
-#gameCanvas {
-    border: 4px solid #009DDE;
-    background-color: #2C336A;
-    margin-bottom: 10px;
-}
-
-#gameControls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#newGameBtn {
-    background-color: #ff0000;
-    color: #ffffff;
+#download-form input[type="text"] {
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin: 10px 0;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
-#playerName {
-    padding: 5px;
-    margin-bottom: 10px;
+#download-form button {
+    padding: 10px 20px;
+    font-size: 18px;
 }
-
-#points {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-#highScoresList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-}
-
-/* SNAKE */
