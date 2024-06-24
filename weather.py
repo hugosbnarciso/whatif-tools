@@ -9,24 +9,21 @@ import config
 owm = OWM(config.OWM_API_KEY)
 mgr = owm.weather_manager()
 
-
 def get_weather():
     """Fetch current weather for Dubai."""
     try:
-        observation = mgr.weather_at_place("Dubai, AE")
-        weather = observation.weather
-        temperature = weather.temperature('celsius')["temp"]
-        status = weather.status
+        one_call = mgr.one_call(lat=25.276987, lon=55.296249, exclude='minutely,hourly,daily,alerts')
+        current_weather = one_call.current
+        temperature = current_weather.temperature('celsius')["temp"]
+        status = current_weather.status
         return temperature, status
     except APIRequestError as e:
         print(f"Error fetching weather data: {e}")
         return None, None
 
-
 def get_sun_times():
     """Get today's sunrise and sunset times for Dubai."""
     try:
-        # Specify the correct time zone for Dubai
         dubai_tz = timezone("Asia/Dubai")
         city = LocationInfo("Dubai", "UAE", dubai_tz.zone, 25.276987, 55.296249)
         s = sun(city.observer, date=datetime.date.today(), tzinfo=dubai_tz)
@@ -43,7 +40,6 @@ def deg_to_compass(deg):
         "WSW", "W", "WNW", "NW", "NNW"
     ]
     return arr[val % 16]
-
 
 def get_forecast(selected_date):
     """Get a three-day weather forecast starting from the selected date."""
