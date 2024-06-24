@@ -1,0 +1,78 @@
+<div class="outer-box">
+    <h2>Conversion</h2>
+    <!-- Length Conversion -->
+    <div class="conversion-row">
+        <label for="pixelWidth">PWidth: </label>
+        <input type="number" id="pixelWidth" class="aligned-item" min="1">
+        <label for="pixelHeight">PHeight: </label>
+        <input type="number" id="pixelHeight" class="aligned-item" min="1">
+        <label for="aspectWidth">AWidth: </label>
+        <input type="number" id="aspectWidth" class="aligned-item" min="1">
+        <label for="aspectHeight">AHeight: </label>
+        <input type="number" id="aspectHeight" class="aligned-item" min="1">
+    </div>
+    <div class="conversion-row">
+        <label for="cmInput">Centimeters</label>
+        <input type="number" id="cmInput" class="aligned-item" min="1" oninput="convertCmToM()">
+        <label for="mInput">Meters</label>
+        <input type="number" id="mInput" class="aligned-item" min="1" oninput="convertMToCm()">
+    </div>
+    <div class="conversion-row">
+        <label for="inchesInput">Inches</label>
+        <input type="number" id="inchesInput" class="aligned-item" min="1" oninput="convertInchesToCm()">
+        <label for="cmInchesInput">Centimeters</label>
+        <input type="number" id="cmInchesInput" class="aligned-item" min="1" oninput="convertCmToInches()">
+    </div>
+    <div class="conversion-row">
+        <label for="feetInput">Feet</label>
+        <input type="number" id="feetInput" class="aligned-item" min="1" oninput="convertFeetToMeters()">
+        <label for="metersInput">Meters</label>
+        <input type="number" id="metersInput" class="aligned-item" min="1" oninput="convertMetersToFeet()">
+    </div>
+    <!-- Weight Conversion -->
+    <div class="conversion-row">
+        <label for="ouncesInput">Ounces</label>
+        <input type="number" id="ouncesInput" class="aligned-item" min="1" oninput="convertOuncesToGrams()">
+        <label for="gramsInput">Grams</label>
+        <input type="number" id="gramsInput" class="aligned-item" min="1" oninput="convertGramsToOunces()">
+    </div>
+    <div class="conversion-row">
+        <label for="poundsInput">Pounds</label>
+        <input type="number" id="poundsInput" class="aligned-item" min="1" oninput="convertPoundsToKg()">
+        <label for="kgInput">Kilograms</label>
+        <input type="number" id="kgInput" class="aligned-item" min="1" oninput="convertKgToPounds()">
+    </div>
+    <!-- Area Conversion -->
+    <div class="conversion-row">
+        <label for="sqmInput">Square Meters</label>
+        <input type="number" id="sqmInput" class="aligned-item" min="1" oninput="convertSqmToSqft()">
+        <label for="sqftInput">Square Feet</label>
+        <input type="number" id="sqftInput" class="aligned-item" min="1" oninput="convertSqftToSqm()">
+    </div>
+    <!-- Speed Conversion -->
+    <div class="conversion-row">
+        <label for="mphInput">Miles/Hour</label>
+        <input type="number" id="mphInput" class="aligned-item" min="1" oninput="convertMphToKph()">
+        <label for="kphInput">Km/Hour</label>
+        <input type="number" id="kphInput" class="aligned-item" min="1" oninput="convertKphToMph()">
+    </div>
+    <!-- Time Conversion -->
+    <div class="conversion-row">
+        <label for="minutesInput">Minutes</label>
+        <input type="number" id="minutesInput" class="aligned-item" min="1" oninput="convertMinutesToSeconds()">
+        <label for="secondsInput">Seconds</label>
+        <input type="number" id="secondsInput" class="aligned-item" min="1" oninput="convertSecondsToMinutes()">
+    </div>
+    <div class="conversion-row">
+        <label for="hoursInput">Hours</label>
+        <input type="number" id="hoursInput" class="aligned-item" min="1" oninput="convertHoursToMinutes()">
+        <label for="hoursMinutesInput">Minutes</label>
+        <input type="number" id="hoursMinutesInput" class="aligned-item" min="1" oninput="convertMinutesToHours()">
+    </div>
+    <div class="conversion-row">
+        <label for="daysInput">Days</label>
+        <input type="number" id="daysInput" class="aligned-item" min="1" oninput="convertDaysToHours()">
+        <label for="daysHoursInput">Hours</label>
+        <input type="number" id="daysHoursInput" class="aligned-item" min="1" oninput="convertHoursToDays()">
+    </div>
+</div>

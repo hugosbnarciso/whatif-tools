@@ -97,3 +97,21 @@ function convertHoursToDays() {
     let hours = parseFloat(document.getElementById("daysHoursInput").value);
     document.getElementById("daysInput").value = hours / 24;
 }
+
+document.addEventListener("input", function(event) {
+    let pixelWidth = parseFloat(document.getElementById("pixelWidth").value);
+    let pixelHeight = parseFloat(document.getElementById("pixelHeight").value);
+    let aspectWidth = parseFloat(document.getElementById("aspectWidth").value);
+    let aspectHeight = parseFloat(document.getElementById("aspectHeight").value);
+
+    let pixelSizeFilled = !isNaN(pixelWidth) && pixelWidth !== 0 && !isNaN(pixelHeight) && pixelHeight !== 0;
+    let aspectRatioFilled = !isNaN(aspectWidth) && aspectWidth !== 0 || !isNaN(aspectHeight) && aspectHeight !== 0;
+
+    if (aspectRatioFilled && ["aspectWidth", "aspectHeight"].includes(event.target.id)) {
+        if (event.target.id === "aspectWidth") {
+            document.getElementById("aspectHeight").value = (aspectWidth / pixelWidth) * pixelHeight;
+        } else if (event.target.id === "aspectHeight") {
+            document.getElementById("aspectWidth").value = (aspectHeight / pixelHeight) * pixelWidth;
+        }
+    }
+});
