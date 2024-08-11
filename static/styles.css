@@ -149,20 +149,3 @@ th {
 .triple-column .outer-box {
     flex: 1;
 }
-
-/* Styles for the video download form */
-#download-form label {
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-#download-form input[type="text"] {
-    padding: 10px;
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-#download-form button {
-    padding: 10px 20px;
-    font-size: 18px;
-}
