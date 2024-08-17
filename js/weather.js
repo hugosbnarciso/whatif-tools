@@ -2,11 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const weatherBox = document.querySelector('.box-2-content');
     const dropdown = document.getElementById('day-selector');
 
-    const apiKey = 'e4509de89ea77b8a5413fcb18f456022';  // Replace this with your valid API key
     const lat = '25.276987';  // Latitude of Dubai
     const lon = '55.296249';  // Longitude of Dubai
     const units = 'metric';  // For Celsius
-    const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=${units}&appid=${apiKey}`;
+    const apiUrl = `/weather?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=${units}`;
 
     let forecastData = [];
 
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const visibility = (dayData.visibility ? dayData.visibility / 1000 : 10).toFixed(1);  // Assume max visibility if not provided
 
         weatherBox.innerHTML = `
-            <div style="display: flex; align-items: center;  list-style: none; gap: 0.8rem;">
+            <div style="display: flex; align-items: center; list-style: none; gap: 0.8rem;">
                 <ul>
                     <li><img src="assets/images/weather/${icon}@2x.png" alt="${description}" /></li>
                 </ul>
@@ -63,8 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li style="font-size: 0.7rem;">Humidity: ${humidity}%</li>
                     <li style="font-size: 0.7rem;">Visibility: ${visibility} Km</li>
                     <li style="font-size: 0.7rem;">Precipitation: ${precipitation} mm</li>
-
-                    </ul>
+                </ul>
             </div>
         `;
     }
