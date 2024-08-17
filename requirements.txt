@@ -1,9 +1,0 @@
-Flask==2.0.1
-PyMuPDF
-Pillow==8.3.2
-reportlab
-pdfplumber
-astral
-pyowm
-yt-dlp
-flask

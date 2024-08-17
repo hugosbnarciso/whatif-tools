@@ -1,6 +1,2 @@
 /.DS_Store
-/temp
-/__pycache__
-cookies.txt
-notes.txt
-.env
+js/weather.js
