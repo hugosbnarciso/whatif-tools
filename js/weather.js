@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const weatherBox = document.querySelector('.box-2-content');
     const dropdown = document.getElementById('day-selector');
 
-    const apiUrl = '/weather';  // Call your server endpoint instead of the API directly
+    const apiUrl = '/weather';
 
     let forecastData = [];
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 forecastData = data.daily;
                 populateDropdown(forecastData);
-                displayWeather(forecastData[0]);  // Display weather for today by default
+                displayWeather(forecastData[0]);
             } else {
                 weatherBox.innerHTML = 'Error fetching weather data';
             }
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function populateDropdown(forecastData) {
         forecastData.forEach((dayData, index) => {
             const option = document.createElement('option');
-            const date = new Date(dayData.dt * 1000);  // Convert Unix timestamp to JS Date
+            const date = new Date(dayData.dt * 1000);
             option.value = index;
             option.textContent = date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
             dropdown.appendChild(option);
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const windSpeed = dayData.wind_speed;
         const precipitation = dayData.rain || 0;
         const feelsLike = Math.round(dayData.feels_like.day);
-        const visibility = (dayData.visibility ? dayData.visibility / 1000 : 10).toFixed(1);  // Assume max visibility if not provided
+        const visibility = (dayData.visibility ? dayData.visibility / 1000 : 10).toFixed(1);
 
         weatherBox.innerHTML = `
             <div style="display: flex; align-items: center;  list-style: none; gap: 0.8rem;">
