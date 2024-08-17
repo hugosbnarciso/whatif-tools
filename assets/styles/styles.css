@@ -37,7 +37,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: sticky;
     bottom: 0;
 }
 
@@ -67,7 +67,7 @@ h3 {
 .triple-column {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 200px;
 }
 
 .box-1 {
