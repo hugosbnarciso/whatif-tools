@@ -2,11 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const weatherBox = document.querySelector('.box-2-content');
     const dropdown = document.getElementById('day-selector');
 
-    const apiKey = 'e4509de89ea77b8a5413fcb18f456022';  // Replace this with your valid API key
-    const lat = '25.276987';  // Latitude of Dubai
-    const lon = '55.296249';  // Longitude of Dubai
-    const units = 'metric';  // For Celsius
-    const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=${units}&appid=${apiKey}`;
+    const apiUrl = '/weather';  // Call your server endpoint instead of the API directly
 
     let forecastData = [];
 
