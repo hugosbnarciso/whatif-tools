@@ -74,7 +74,7 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     border-radius: 50px;
-    height: 350px;
+    height: 200px;
     width: 350px;
     font-size: 0.8rem;
 }
@@ -95,8 +95,8 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     border-radius: 50px;
-    height: 150px;
     width: 350px;
+    height: 160px;
     font-size: 0.8rem;
 }
 
@@ -118,24 +118,23 @@ h3 {
 
 .box-1-content-2 {
     display: flex;
-    gap: 15%;
+    gap: 2rem;
     justify-content: center;
 }
 
 .box-2-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     font-family: 'Verb Light', sans-serif;
     color: #2C336A;
     font-size: 1rem;
+    padding: 5% 0% 0% 0%;
 }
 
 .box-3-content-1 {
     display: flex;
-    gap: 15%;
+    gap: 2rem;
     justify-content: center;
     padding: 6% 6% 0% 6%;
 }
@@ -149,10 +148,9 @@ h3 {
     width: 100px; /* Default size, dynamically updated */
     height: 100px; /* Default size, dynamically updated */
     max-height: 200px; /* Ensure the height never exceeds 200px */
-    background-color: #2C336A;
-    margin-top: 20px;
+    margin-top: 1.5rem;
     background-color: #f9f9f9;
-    border: 5px solid #2C336A;
+    border: 5px solid #009DDE;
     border-radius: 5px;
     position: relative; /* Make sure the text is positioned relative to this box */
     transition: width 0.3s ease, height 0.3s ease;
@@ -361,14 +359,36 @@ input[type="number-long"] {
 }
 
 button {
-    background-color: #009DDE;
-    color: #ffffff;
-    /* White text */
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
+    /* Adjust the height to make the color boxes larger */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Lulo Clean One Bold', sans-serif;
-    /* Use bold font for consistency */
-    font-size: 80%;
+    font-size: 0.6rem;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    background-color: #009DDE;
+    padding: 5px 10px;
     cursor: pointer;
+}
+
+select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lulo Clean One Bold', sans-serif;
+    font-size: 0.6rem;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    background-color: #009DDE;
+    padding: 5px 10px;
+    cursor: pointer;
+    appearance: none;         /* Standard Sintax */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;    /* For Firefox */
+    text-align: center;
 }
