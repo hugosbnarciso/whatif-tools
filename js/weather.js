@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </ul>
                 <ul>
                     <li style="font-size: 2.3rem; font-weight: bold;">${temp}°C</li>
-                    <li style="font-size: .7rem; font-weight: bold;">Feels Like: ${feelsLike}°C</li>
+                    <li style="font-size: .7rem;">Feels Like: ${feelsLike}°C</li>
                 </ul>
                 <ul>
                     <li style="font-size: 0.7rem;">Wind: ${windSpeed} km/h</li>
