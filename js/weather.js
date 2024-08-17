@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const lat = '25.276987';  // Latitude of Dubai
     const lon = '55.296249';  // Longitude of Dubai
     const units = 'metric';  // For Celsius
-    const apiUrl = `onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=${units}&appid=${apiKey}`;
+    const apiUrl = `onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=${units}`;
 
     let forecastData = [];
 
