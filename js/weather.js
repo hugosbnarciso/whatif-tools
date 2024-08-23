@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     weatherBox.innerHTML = `
             <div style="display: flex; align-items: center;  list-style: none; gap: 0.8rem;">
                 <ul>
-                    <li><img src="assets/images/weather/${icon}@2x.svg" alt="${description}" style="height: 100px" /></li>
+                    <li><img src="assets/images/weather/${icon}@2x.svg" alt="${description}" style="height: 50px;" /></li>
                 </ul>
                 <ul>
                     <li style="font-size: 2.3rem; font-weight: bold;">${temp}°C</li>
