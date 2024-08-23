@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d4f4ff;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="cloud">
+        <path class="cls-1" d="M77.41,81.28c12.47,0,22.59-10.11,22.59-22.58s-10.11-22.58-22.59-22.58c-1.75,0-3.45.22-5.09.6-3.14-10.41-12.8-18-24.24-18-13.98,0-25.32,11.34-25.32,25.32,0,.52.05,1.02.08,1.53-1.52-.41-3.12-.65-4.77-.65C8.03,44.92-.11,53.06-.11,63.1s8.14,18.18,18.19,18.18h59.34Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

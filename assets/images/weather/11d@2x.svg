@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0f9bd7;
+      }
+
+      .cls-2 {
+        fill: #2b346a;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <g id="flashing">
+          <polygon class="cls-1" points="41.24 58.61 57.31 58.61 49.28 73.83 62.02 73.83 39.95 99.86 45.1 84.11 30.42 84.11 41.24 58.61"/>
+        </g>
+        <g id="raining">
+          <path class="cls-2" d="M74.29,55.48c11.03,0,19.98-8.95,19.98-19.97s-8.95-19.97-19.98-19.97c-1.55,0-3.05.19-4.5.53C67.01,6.85,58.47.14,48.36.14c-12.37,0-22.39,10.03-22.39,22.39,0,.46.04.91.07,1.35-1.35-.36-2.76-.58-4.22-.58-8.88,0-16.08,7.2-16.08,16.08s7.2,16.08,16.08,16.08h52.48Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
