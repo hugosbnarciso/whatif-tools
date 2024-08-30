@@ -37,7 +37,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 }
 
@@ -138,6 +138,7 @@ h3 {
   justify-content: center;
   padding: 6% 6% 0% 6%;
 }
+
 .box-3-content-2 {
   display: flex;
   justify-content: center;
@@ -145,14 +146,18 @@ h3 {
 }
 
 .aspect-ratio-box {
-  width: 100px; /* Default size, dynamically updated */
-  height: 100px; /* Default size, dynamically updated */
-  max-height: 200px; /* Ensure the height never exceeds 200px */
+  width: 100px;
+  /* Default size, dynamically updated */
+  height: 100px;
+  /* Default size, dynamically updated */
+  max-height: 200px;
+  /* Ensure the height never exceeds 200px */
   margin-top: 1.5rem;
   background-color: #f9f9f9;
   border: 5px solid #009dde;
   border-radius: 5px;
-  position: relative; /* Make sure the text is positioned relative to this box */
+  position: relative;
+  /* Make sure the text is positioned relative to this box */
   transition: width 0.3s ease, height 0.3s ease;
 }
 
@@ -384,8 +389,11 @@ select {
   background-color: #009dde;
   padding: 5px 10px;
   cursor: pointer;
-  appearance: none; /* Standard Sintax */
-  -webkit-appearance: none; /* For Safari */
-  -moz-appearance: none; /* For Firefox */
+  appearance: none;
+  /* Standard Sintax */
+  -webkit-appearance: none;
+  /* For Safari */
+  -moz-appearance: none;
+  /* For Firefox */
   text-align: center;
 }
