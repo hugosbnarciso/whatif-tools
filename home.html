@@ -179,9 +179,9 @@
     </ul>
   </footer>
   <!-- Include JavaScript -->
-  <script src="js/percentage.js"></script>
-  <script src="js/weather.js"></script>
-  <script src="js/aspect-ratio.js"></script>
+  <script src="js/percentage.js?v=<?= filemtime(__DIR__ . '/js/percentage.js'); ?>"></script>
+  <script src="js/weather.js?v=<?= filemtime(__DIR__ . '/js/weather.js'); ?>"></script>
+  <script src="js/aspect-ratio.js?v=<?= filemtime(__DIR__ . '/js/aspect-ratio.js'); ?>"></script>
 </body>
 
 </html>
