@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const weatherBox = document.querySelector(".box-2-content");
   const dropdown = document.getElementById("day-selector");
 
+  // weather-proxy.php
   const apiUrl = "/weather-proxy.php";
 
   let forecastData = [];
