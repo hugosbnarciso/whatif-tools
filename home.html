@@ -1,318 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="WHAT IF Creative Studio - Internal Tools"
-    />
-    <meta
-      name="keywords"
-      content="tools, creative studio, percentage calculator, aspect ratio, weather"
-    />
-    <meta property="og:title" content="WHAT IF Creative Studio" />
-    <meta property="og:description" content="Internal Tools" />
-    <meta
-      property="og:image"
-      content="assets/images/logos/trident-lightblue.png"
-    />
-    <title>WHAT IF Creative Studio - Tools</title>
-    <link rel="stylesheet" href="assets/styles/styles.css" />
 
-    <link
-      rel="preload"
-      href="assets/fonts/LuloCleanOneBold.otf"
-      as="font"
-      type="font/otf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/VerbLight.otf"
-      as="font"
-      type="font/otf"
-      crossorigin
-    />
-    <!-- Link to favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="assets/images/favicons/safari-pinned-tab.svg"
-      color="#009dde"
-    />
-    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#2c336a" />
-    <meta
-      name="msapplication-config"
-      content="assets/images/favicons/browserconfig.xml"
-    />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WHAT IF Creative Studio - Internal Tools" />
+  <meta name="keywords" content="tools, creative studio, percentage calculator, aspect ratio, weather" />
+  <meta property="og:title" content="WHAT IF Creative Studio" />
+  <meta property="og:description" content="Internal Tools" />
+  <meta property="og:image" content="assets/images/logos/trident-lightblue.png" />
+  <title>WHAT IF Creative Studio - Tools</title>
+  <link rel="stylesheet" href="assets/styles/styles.css" />
 
-  <body>
-    <!-- Header with logo -->
-    <header>
-      <img
-        src="assets/images/logos/logo-whatif-color.png"
-        alt="WHAT IF Creative Studio"
-        id="logo"
-      />
-    </header>
-    <div class="triple-column">
-      <div class="title-container">
-        <h1>PERCENTAGE</h1>
-        <div class="box-1">
-          <div class="box-1-content-1">
-            <ul>
-              <li>
-                <div>
-                  <label for="percent">What is </label>
-                  <input
-                    type="number-short"
-                    id="percent"
-                    class="aligned-item"
-                    min="0"
-                    oninput="calculatePercentage()"
-                  />%
-                  <label for="num1">of </label>
-                  <input
-                    type="number-long"
-                    id="num1"
-                    class="aligned-item"
-                    min="0"
-                    oninput="calculatePercentage()"
-                  />
-                </div>
-              </li>
-              <li>
-                <div>
-                  <input
-                    type="number-short"
-                    id="num2"
-                    class="aligned-item"
-                    min="0"
-                    oninput="calculateWhatPercentageOf()"
-                  />
-                  <label for="num2">is what percentage of</label>
-                  <input
-                    type="number-short"
-                    id="num3"
-                    class="aligned-item"
-                    min="0"
-                    oninput="calculateWhatPercentageOf()"
-                  />
-                </div>
-              </li>
-              <li>
-                <div>
-                  <label for="start">Difference from </label>
-                  <input
-                    type="number-short"
-                    id="start"
-                    class="aligned-item"
-                    min="0"
-                    oninput="calculatePercentageChange()"
-                  />
-                  <label for="end">to </label>
-                  <input
-                    type="number-short"
-                    id="end"
-                    class="aligned-item"
-                    min="0"
-                    oninput="calculatePercentageChange()"
-                  />
-                </div>
-              </li>
-              <li>
-                <div>
-                  <label for="vatInput">Add/Remove VAT (5%): </label>
-                  <input
-                    type="number-long"
-                    id="vatInput"
-                    class="aligned-item"
-                  />
-                </div>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <div>
-                  <span id="result1" class="result-box">&nbsp;</span>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span id="result2" class="result-box">&nbsp;</span>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span id="result3" class="result-box">&nbsp;</span>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <span id="resultVAT" class="result-box">&nbsp;</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="box-1-content-2">
-            <button onclick="addVAT()">ADD VAT</button>
-            <button onclick="removeVAT()">REMOVE VAT</button>
-          </div>
+  <link rel="preload" href="assets/fonts/LuloCleanOneBold.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="assets/fonts/VerbLight.otf" as="font" type="font/otf" crossorigin />
+  <!-- Link to favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#009dde" />
+  <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#2c336a" />
+  <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+  <!-- Header with logo -->
+  <header>
+    <img src="assets/images/logos/logo-whatif-color.png" alt="WHAT IF Creative Studio" id="logo" />
+  </header>
+  <div class="triple-column">
+    <div class="title-container">
+      <h1>PERCENTAGE</h1>
+      <div class="box-1">
+        <div class="box-1-content-1">
+          <ul>
+            <li>
+              <div>
+                <label for="percent">What is </label>
+                <input type="number-short" id="percent" class="aligned-item" min="0" oninput="calculatePercentage()" />%
+                <label for="num1">of </label>
+                <input type="number-long" id="num1" class="aligned-item" min="0" oninput="calculatePercentage()" />
+              </div>
+            </li>
+            <li>
+              <div>
+                <input type="number-short" id="num2" class="aligned-item" min="0"
+                  oninput="calculateWhatPercentageOf()" />
+                <label for="num2">is what percentage of</label>
+                <input type="number-short" id="num3" class="aligned-item" min="0"
+                  oninput="calculateWhatPercentageOf()" />
+              </div>
+            </li>
+            <li>
+              <div>
+                <label for="start">Difference from </label>
+                <input type="number-short" id="start" class="aligned-item" min="0"
+                  oninput="calculatePercentageChange()" />
+                <label for="end">to </label>
+                <input type="number-short" id="end" class="aligned-item" min="0"
+                  oninput="calculatePercentageChange()" />
+              </div>
+            </li>
+            <li>
+              <div>
+                <label for="vatInput">Add/Remove VAT (5%): </label>
+                <input type="number-long" id="vatInput" class="aligned-item" />
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div>
+                <span id="result1" class="result-box">&nbsp;</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span id="result2" class="result-box">&nbsp;</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span id="result3" class="result-box">&nbsp;</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span id="resultVAT" class="result-box">&nbsp;</span>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="title-container" style="padding-top: 20px">
-          <h1>WEATHER</h1>
-          <div class="box-2">
-            <div class="box-2-content">
-              <!-- Weather data will be inserted here -->
-            </div>
-            <div class="box-2-content">
-              <select id="day-selector" class="day-dropdown">
-                <!-- Options will be dynamically inserted here -->
-              </select>
-            </div>
-          </div>
+        <div class="box-1-content-2">
+          <button onclick="addVAT()">ADD VAT</button>
+          <button onclick="removeVAT()">REMOVE VAT</button>
         </div>
       </div>
-      <div class="title-container">
-        <h1>ASPECT RATIO</h1>
-        <div class="box-3">
-          <div class="box-3-content-1">
-            <ul>
-              <li>
-                <label for="pixelWidth">Width </label
-                ><input
-                  type="number-long"
-                  id="pixelWidth"
-                  class="aligned-item"
-                  value="1920"
-                  tabindex="1"
-                />
-              </li>
-              <li>
-                <label for="aspectWidth">Width </label
-                ><input
-                  type="number-long"
-                  id="aspectWidth"
-                  class="aligned-item"
-                  value="1280"
-                  tabindex="3"
-                />
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <label for="pixelHeight">Peight </label
-                ><input
-                  type="number-long"
-                  id="pixelHeight"
-                  class="aligned-item"
-                  value="1080"
-                  tabindex="2"
-                />
-              </li>
-              <li>
-                <label for="aspectHeight">Height </label
-                ><input
-                  type="number-long"
-                  id="aspectHeight"
-                  class="aligned-item"
-                  value="720"
-                  tabindex="4"
-                />
-              </li>
-            </ul>
+      <div class="title-container" style="padding-top: 20px">
+        <h1>WEATHER</h1>
+        <div class="box-2">
+          <div class="box-2-content">
+            <!-- Weather data will be inserted here -->
           </div>
-          <div class="box-3-content-2">
-            <div id="aspect-ratio-box" class="aspect-ratio-box">
-              <span id="aspect-ratio-text">You look great today!</span>
-            </div>
+          <div class="box-2-content">
+            <select id="day-selector" class="day-dropdown">
+              <!-- Options will be dynamically inserted here -->
+            </select>
           </div>
         </div>
       </div>
     </div>
-    <!-- Fonts and Colors section -->
-    <div class="additional-info">
-      <div class="title-container">
-        <h3>METUBE</h3>
-        <div class="info-box-fonts"></div>
-      </div>
-      <div class="title-container">
-        <h3>WHISPER</h3>
-        <div class="info-box-colors"></div>
-      </div>
-      <div class="title-container">
-        <h3>AI</h3>
-        <div class="info-box-colors"></div>
-      </div>
-      <div class="title-container">
-        <h3>PDF TOOLS</h3>
-        <div class="info-box-colors"></div>
+    <div class="title-container">
+      <h1>ASPECT RATIO</h1>
+      <div class="box-3">
+        <div class="box-3-content-1">
+          <ul>
+            <li>
+              <label for="pixelWidth">Width </label><input type="number-long" id="pixelWidth" class="aligned-item"
+                value="1920" tabindex="1" />
+            </li>
+            <li>
+              <label for="aspectWidth">Width </label><input type="number-long" id="aspectWidth" class="aligned-item"
+                value="1280" tabindex="3" />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <label for="pixelHeight">Peight </label><input type="number-long" id="pixelHeight" class="aligned-item"
+                value="1080" tabindex="2" />
+            </li>
+            <li>
+              <label for="aspectHeight">Height </label><input type="number-long" id="aspectHeight" class="aligned-item"
+                value="720" tabindex="4" />
+            </li>
+          </ul>
+        </div>
+        <div class="box-3-content-2">
+          <div id="aspect-ratio-box" class="aspect-ratio-box">
+            <span id="aspect-ratio-text">You look great today!</span>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Footer with social media icons -->
-    <footer>
-      <ul class="social-icons">
-        <li>
-          <a href="https://facebook.com/whatifcreativestudio"
-            ><img src="assets/images/icons/icon-facebook.png" alt="Facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="https://instagram.com/whatifcreativestudio"
-            ><img src="assets/images/icons/icon-instagram.png" alt="Instagram"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/whatifcreativestudio"
-            ><img src="assets/images/icons/icon-linkedin.png" alt="LinkedIn"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/@whatifcreativestudio"
-            ><img src="assets/images/icons/icon-youtube.png" alt="YouTube"
-          /></a>
-        </li>
-        <li>
-          <a href="https://discord.gg/Gx5buYS4Kn"
-            ><img src="assets/images/icons/icon-discord.png" alt="Discord"
-          /></a>
-        </li>
-        <li>
-          <a href="https://x.com/whatifcs"
-            ><img src="assets/images/icons/icon-x.png" alt="X"
-          /></a>
-        </li>
-        <li>
-          <a href="mailto:info@whatif.ae"
-            ><img src="assets/images/icons/icon-email.png" alt="Email"
-          /></a>
-        </li>
-      </ul>
-    </footer>
-    <!-- Include JavaScript -->
-    <script src="js/percentage.js"></script>
-    <script src="js/weather.js"></script>
-    <script src="js/aspect-ratio.js"></script>
-  </body>
+  </div>
+  <!-- Fonts and Colors section -->
+  <div class="additional-info">
+    <div class="title-container">
+      <h3>METUBE</h3>
+      <div class="info-box-fonts"></div>
+    </div>
+    <div class="title-container">
+      <h3>WHISPER</h3>
+      <div class="info-box-colors"></div>
+    </div>
+    <div class="title-container">
+      <h3>AI</h3>
+      <div class="info-box-colors"></div>
+    </div>
+    <div class="title-container">
+      <h3>PDF TOOLS</h3>
+      <div class="info-box-colors"></div>
+    </div>
+  </div>
+  <!-- Footer with social media icons -->
+  <footer>
+    <ul class="social-icons">
+      <li>
+        <a href="https://facebook.com/whatifcreativestudio"><img src="assets/images/icons/icon-facebook.png"
+            alt="Facebook" /></a>
+      </li>
+      <li>
+        <a href="https://instagram.com/whatifcreativestudio"><img src="assets/images/icons/icon-instagram.png"
+            alt="Instagram" /></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/whatifcreativestudio"><img src="assets/images/icons/icon-linkedin.png"
+            alt="LinkedIn" /></a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@whatifcreativestudio"><img src="assets/images/icons/icon-youtube.png"
+            alt="YouTube" /></a>
+      </li>
+      <li>
+        <a href="https://discord.gg/Gx5buYS4Kn"><img src="assets/images/icons/icon-discord.png" alt="Discord" /></a>
+      </li>
+      <li>
+        <a href="https://x.com/whatifcs"><img src="assets/images/icons/icon-x.png" alt="X" /></a>
+      </li>
+      <li>
+        <a href="mailto:info@whatif.ae"><img src="assets/images/icons/icon-email.png" alt="Email" /></a>
+      </li>
+    </ul>
+  </footer>
+  <!-- Include JavaScript -->
+  <script src="js/percentage.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/aspect-ratio.js"></script>
+</body>
+
 </html>
