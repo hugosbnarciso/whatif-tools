@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const weatherBox = document.querySelector(".box-2-content");
+  const weatherBox = document.querySelector(".weather-2");
   const dropdown = document.getElementById("day-selector");
 
   // weather-proxy.php
