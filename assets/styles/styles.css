@@ -1,28 +1,29 @@
+@font-face {
+  font-family: "Lulo Clean One Bold";
+  src: url("/assets/fonts/LuloCleanOneBold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Verb Light";
+  src: url("/assets/fonts/VerbLight.otf") format("opentype");
+}
+
 /* Set the body font and background color */
 body {
   font-family: "Verb Light", sans-serif;
+  background-color: #ffffff;
   color: #2c336a;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  /* Prevent horizontal scroll */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
   display: flex;
-  /* Use flexbox layout */
+  flex-direction: column;
   align-items: center;
-  /* Vertically centers content */
-  justify-content: center;
-  /* Horizontally centers content */
-  padding: 20px 0;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header and logo */
+header {
+  padding: 20px;
 }
 
 #logo {
@@ -30,15 +31,14 @@ header {
 }
 
 footer {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   background-color: #009dde;
-  padding: 10px 0;
   width: 100%;
+  height: 60px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .social-icons {
@@ -52,28 +52,10 @@ footer {
   cursor: pointer;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 175px 175px 175px;
-  align-items: start;
-  column-width: 350px;
-  padding: 0 10%;
-  justify-content: center;
-}
-
-
 h1 {
   text-align: center;
   font-family: "Lulo Clean One Bold", sans-serif;
   font-size: 1rem;
-}
-
-h2 {
-  text-align: center;
-  font-family: "Lulo Clean One Bold", sans-serif;
-  color: #2c336a;
-  font-size: 1rem;
-  padding-bottom: 0.8rem;
 }
 
 h3 {
@@ -88,16 +70,7 @@ h3 {
   gap: 200px;
 }
 
-.box li {
-  margin-bottom: 6%;
-}
-
-.box-percentage {
-  grid-column: span 2;
-  padding: 5px 0;
-}
-
-.percentage {
+.box-1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   border-radius: 50px;
@@ -106,26 +79,19 @@ h3 {
   font-size: 0.8rem;
 }
 
-.percentage-1 {
-  display: flex;
-  gap: 15%;
-  padding: 6% 6% 0% 6%;
-  justify-content: space-evenly;
+.box-1 li {
+  margin-bottom: 6%;
 }
 
-.percentage-2 {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
+.box-2 li {
+  margin-bottom: 6%;
 }
 
-.box-weather {
-  grid-row-start: 2;
-  grid-column: span 2;
-  padding: 25px 0;
+.box-3 li {
+  margin-bottom: 6%;
 }
 
-.weather {
+.box-2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   border-radius: 50px;
@@ -134,8 +100,29 @@ h3 {
   font-size: 0.8rem;
 }
 
-.weather-1,
-.weather-2 {
+.box-3 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  height: 350px;
+  width: 350px;
+  font-size: 0.8rem;
+}
+
+.box-1-content-1 {
+  display: flex;
+  gap: 15%;
+  padding: 6% 6% 0% 6%;
+  justify-content: space-evenly;
+}
+
+.box-1-content-2 {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.box-2-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,30 +132,14 @@ h3 {
   padding: 5% 0% 0% 0%;
 }
 
-.box-aspect-ratio {
-  grid-column: span 2 / span 2;
-  grid-row: span 2;
-  grid-column-start: 4;
-  padding: 5px 0;
-}
-
-.aspect-ratio {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-  border-radius: 50px;
-  height: 350px;
-  width: 350px;
-  font-size: 0.8rem;
-}
-
-.aspect-ratio-1 {
+.box-3-content-1 {
   display: flex;
   gap: 2rem;
   justify-content: center;
   padding: 6% 6% 0% 6%;
 }
 
-.aspect-ratio-2 {
+.box-3-content-2 {
   display: flex;
   justify-content: center;
   padding: 0% 6% 0% 6%;
@@ -245,6 +216,109 @@ li {
 /* Show the preview when hovering over the list item */
 .templates-content li:hover .preview {
   display: block;
+}
+
+/* FONT + COLOR BOXES */
+.additional-info {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 3%;
+  gap: 10px;
+}
+
+.info-box-fonts {
+  width: 150px;
+  height: 100px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.info-box-fonts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box-fonts li {
+  margin-bottom: 5px;
+  font-family: "Verb Light", sans-serif;
+  font-size: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  line-height: 0.6;
+  /* Adjust this value to reduce the space between lines */
+}
+
+.info-box-fonts li:last-child {
+  margin-bottom: 0;
+}
+
+.info-box-fonts li a {
+  text-decoration: none;
+  font-size: 80%;
+  color: #2c336a;
+  margin-left: 10px;
+}
+
+.info-box-fonts a:hover {
+  color: #009dde;
+  /* Change text color on hover */
+}
+
+.info-box-fonts ul li[style] {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Color Codes Box COLORS Styling */
+
+.info-box-colors {
+  width: 150px;
+  height: 100px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.info-box-colors ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* Stack the color codes vertically */
+  gap: 10px;
+  /* Space between the color codes */
+}
+
+.info-box-colors li:last-child {
+  margin-bottom: 0;
+}
+
+.info-box-colors li {
+  width: 100%;
+  height: 40px;
+  /* Adjust the height to make the color boxes larger */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Verb", sans-serif;
+  font-size: 100%;
+  /* Increase font size */
+  color: #fff;
+  border-radius: 8px;
+  /* Rounded corners */
+  font-weight: bold;
+}
+
+.info-box-colors li[style] {
+  color: #fff;
+  /* Ensure the text color is white for readability */
 }
 
 label {

@@ -8,59 +8,22 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "WHAT IF Creative Studio - Award-Winning Production Company and Production House in Dubai",
+      "name": "WHAT IF Creative Studio - Production Tools",
       "url": "https://whatif.ae/",
-      "logo": "https://brand.whatif.ae/assets/images/logos/logo-whatif-color.png",
-      "description": "WHAT IF Creative Studio is a leading production company and production house in Dubai, creating award-winning content for brands.",
+      "logo": "https://whatif.ae/img/logo-whatif-color.png",
       "sameAs": [
-        "https://vimeo.com/whatifcreativestudio",
+        "https://www.facebook.com/whatifcreativestudio",
         "https://instagram.com/whatifcreativestudio",
-        "https://linkedin.com/company/whatifcreativestudio",
-        "https://facebook.com/whatifcreativestudio",
+        "https://www.linkedin.com/company/whatifcreativestudio",
         "https://x.com/whatifcs",
-        "https://youtube.com/@whatifcreativestudio",
-        "https://threads.net/@whatifcreativestudio",
-        "https://g.page/whatifcreativestudio"
+        "https://vimeo.com/whatifcreativestudio",
+        "https://www.youtube.com/@whatifcreativestudio"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "043973233",
-        "contactType": "Customer Service",
-        "areaServed": "Dubai",
-        "availableLanguage": ["English", "Arabic", "French", "Spanish", "Portuguese"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Al Barsha Boutique Building, Office 313, Al Barsha 1",
-        "addressLocality": "Dubai",
-        "postalCode": "5003563",
-        "addressCountry": "AE"
-      },
-      "foundingDate": "2016",
-      "founder": [{
-          "@type": "Person",
-          "name": "Hugo Narciso"
-        },
-        {
-          "@type": "Person",
-          "name": "Nasrallah Saad"
-        }
-      ],
-      "Offer": [{
-          "@type": "Service",
-          "name": "Video Production",
-          "description": "Professional video production services for brands, including TV commercials and corporate videos.",
-          "areaServed": "Dubai",
-          "serviceType": "Video Production"
-        },
-        {
-          "@type": "Service",
-          "name": "Creative Content Production",
-          "description": "Award-winning content production services tailored to brands and corporate clients.",
-          "areaServed": "Dubai",
-          "serviceType": "Content Production"
-        }
-      ]
+        "telephone": "0097143973233",
+        "contactType": "Customer Service"
+      }
     }
     </script>
   <meta charset="UTF-8" />
@@ -68,15 +31,15 @@
   <meta name="description"
     content="WHAT IF Creative Studio is an award-winning production company in Dubai offering exceptional video production and creative services.">
   <meta name="keywords"
-    content="tools, creative studio, percentage calculator, aspect ratio, dubai weather, production company, aspect ratio calculator, production company, production house, dubai, film production, video production, creative services, data transfer calculator, data speed transfer" />
+    content="tools, creative studio, percentage calculator, aspect ratio, dubai weather, production company, aspect ratio calculator, production company, production house, dubai, film production, video production, creative services, award winning" />
   <meta property="og:title" content="WHAT IF Creative Studio" />
   <meta property="og:description" content="Production Tools" />
   <meta property="og:url" content="https://tools.whatif.ae">
   <meta property="og:image" content="assets/images/logos/trident-lightblue.png" />
   <meta property="og:type" content="website">
   <title>WHAT IF Creative Studio - Production Tools</title>
-
   <link rel="stylesheet" href="assets/styles/styles.css?v=<?= filemtime(__DIR__ . 'assets/styles/styles.css'); ?>" />
+
   <link rel="preload" href="assets/fonts/LuloCleanOneBold.otf" as="font" type="font/otf" crossorigin />
   <link rel="preload" href="assets/fonts/VerbLight.otf" as="font" type="font/otf" crossorigin />
   <!-- Link to favicon -->
@@ -97,13 +60,11 @@
     <a href="https://whatif.ae/"><img src="assets/images/logos/logo-whatif-color.png" alt="WHAT IF Creative Studio logo"
         id="logo" /></a>
   </header>
-
-
-  <main class="grid-container">
-    <section class="box-percentage box">
-      <h2>PERCENTAGE</h2>
-      <div class="percentage">
-        <div class="percentage-1">
+  <div class="triple-column">
+    <div class="title-container">
+      <h1>PERCENTAGE</h1>
+      <div class="box-1">
+        <div class="box-1-content-1">
           <ul>
             <li>
               <div>
@@ -162,31 +123,29 @@
             </li>
           </ul>
         </div>
-        <div class="percentage-2">
+        <div class="box-1-content-2">
           <button onclick="addVAT()">ADD VAT</button>
           <button onclick="removeVAT()">REMOVE VAT</button>
         </div>
       </div>
-    </section>
-
-    <section class="box-weather box">
-      <h2>WEATHER</h2>
-      <div class="weather">
-        <div class="weather-1">
-          <!-- Weather data will be inserted here -->
-        </div>
-        <div class="weather-2">
-          <select id="day-selector" class="day-dropdown">
-            <!-- Options will be dynamically inserted here -->
-          </select>
+      <div class="title-container" style="padding-top: 20px">
+        <h1>WEATHER</h1>
+        <div class="box-2">
+          <div class="box-2-content">
+            <!-- Weather data will be inserted here -->
+          </div>
+          <div class="box-2-content">
+            <select id="day-selector" class="day-dropdown">
+              <!-- Options will be dynamically inserted here -->
+            </select>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="box-aspect-ratio box">
-      <h2>ASPECT RATIO</h2>
-      <div class="aspect-ratio">
-        <div class="aspect-ratio-1">
+    </div>
+    <div class="title-container">
+      <h1>ASPECT RATIO</h1>
+      <div class="box-3">
+        <div class="box-3-content-1">
           <ul>
             <li>
               <label for="pixelWidth">Width </label><input type="number-long" id="pixelWidth" class="aligned-item"
@@ -208,59 +167,59 @@
             </li>
           </ul>
         </div>
-        <div class="aspect-ratio-2">
+        <div class="box-3-content-2">
           <div id="aspect-ratio-box" class="aspect-ratio-box">
             <span id="aspect-ratio-text">You look great today!</span>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Footer with social media icons -->
-    <footer>
-      <ul class="social-icons">
-        <li>
-          <a href="https://vimeo.com/whatifcreativestudio" target="_blank" rel="noopener"><img
-              src="assets/images/icons/icon-vimeo.svg" alt="Vimeo" /></a>
-        </li>
-        <li>
-          <a href="https://instagram.com/whatifcreativestudio" target="_blank" rel="noopener"><img
-              src="assets/images/icons/icon-instagram.svg" alt="Instagram" /></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/whatifcreativestudio" target="_blank" rel="noopener"><img
-              src="assets/images/icons/icon-linkedin.svg" alt="LinkedIn" /></a>
-        </li>
-        <li>
-          <a href="https://discord.gg/Gx5buYS4Kn" target=" _blank" rel="noopener" "><img
+    </div>
+  </div>
+  <!-- Footer with social media icons -->
+  <footer>
+    <ul class="social-icons">
+      <li>
+        <a href="https://vimeo.com/whatifcreativestudio" target="_blank" rel="noopener"><img
+            src="assets/images/icons/icon-vimeo.svg" alt="Vimeo" /></a>
+      </li>
+      <li>
+        <a href="https://instagram.com/whatifcreativestudio" target="_blank" rel="noopener"><img
+            src="assets/images/icons/icon-instagram.svg" alt="Instagram" /></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/whatifcreativestudio" target="_blank" rel="noopener"><img
+            src="assets/images/icons/icon-linkedin.svg" alt="LinkedIn" /></a>
+      </li>
+      <li>
+        <a href="https://discord.gg/Gx5buYS4Kn" target=" _blank" rel="noopener" "><img
       src=" assets/images/icons/icon-discord.svg" alt="Discord" /></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/@whatifcreativestudio" target=" _blank" rel="noopener" "><img
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@whatifcreativestudio" target=" _blank" rel="noopener" "><img
       src=" assets/images/icons/icon-youtube.svg" alt="YouTube" /></a>
-        </li>
-        <li>
-          <a href="https://x.com/whatifcs" target="_blank" rel="noopener"><img src="assets/images/icons/icon-x.svg"
-              alt="X" /></a>
-        </li>
-        <li>
-          <a href="https://facebook.com/whatifcreativestudio" target="_blank" rel="noopener"><img
-              src="assets/images/icons/icon-facebook.svg" alt="Facebook" /></a>
-        </li>
-        <li>
-          <a href="https://https://www.threads.net/@whatifcreativestudio" target="_blank" rel="noopener"><img
-              src="assets/images/icons/icon-threads.svg" alt="Threads" /></a>
-        </li>
-        <li>
-          <a href="mailto:info@whatif.ae" target="_blank" rel="noopener"><img src="assets/images/icons/icon-email.svg"
-              alt="Email" /></a>
-        </li>
-      </ul>
-    </footer>
-    <!-- Include JavaScript -->
-    <script src="js/percentage.js?v=<?= filemtime(__DIR__ . '/js/percentage.js'); ?>"></script>
-    <script src="js/weather.js?v=<?= filemtime(__DIR__ . '/js/weather.js'); ?>"></script>
-    <script src="js/aspect-ratio.js?v=<?= filemtime(__DIR__ . '/js/aspect-ratio.js'); ?>"></script>
+      </li>
+      <li>
+        <a href="https://x.com/whatifcs" target="_blank" rel="noopener"><img src="assets/images/icons/icon-x.svg"
+            alt="X" /></a>
+      </li>
+      <li>
+        <a href="https://facebook.com/whatifcreativestudio" target="_blank" rel="noopener"><img
+            src="assets/images/icons/icon-facebook.svg" alt="Facebook" /></a>
+      </li>
+      <li>
+        <a href="https://https://www.threads.net/@whatifcreativestudio" target="_blank" rel="noopener"><img
+            src="assets/images/icons/icon-threads.svg" alt="Threads" /></a>
+      </li>
+      <li>
+        <a href="mailto:info@whatif.ae" target="_blank" rel="noopener"><img src="assets/images/icons/icon-email.svg"
+            alt="Email" /></a>
+      </li>
+    </ul>
+  </footer>
+  <!-- Include JavaScript -->
+  <script src="js/percentage.js?v=<?= filemtime(__DIR__ . '/js/percentage.js'); ?>"></script>
+  <script src="js/weather.js?v=<?= filemtime(__DIR__ . '/js/weather.js'); ?>"></script>
+  <script src="js/aspect-ratio.js?v=<?= filemtime(__DIR__ . '/js/aspect-ratio.js'); ?>"></script>
 </body>
 
 </html>
