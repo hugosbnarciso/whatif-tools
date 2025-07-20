@@ -4,6 +4,3 @@ assets/images/weather/.DS_Store
 
 # Ignore VS Code editor-specific settings
 .vscode/
-
-# Ignore the GitHub directory
-.github/
